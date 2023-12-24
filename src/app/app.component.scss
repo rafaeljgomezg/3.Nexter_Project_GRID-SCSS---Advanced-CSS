@@ -1,0 +1,89 @@
+@import "../assets/scss/base";
+
+
+
+
+.sidebar {
+    background-color: $color-primary;
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+    background-position: center;
+
+    @media only screen and (max-width: $bp-3m) {
+        grid-column: 1 / -1 ;
+        grid-row: 1 / 2;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+}
+
+.header {
+    //background-color: $color-grey-dark-1;
+    grid-column: full-start / col-end 6;
+
+    background-image: linear-gradient(rgba($color-secondary, .93),rgba($color-secondary, .93)), url("../assets/img/hero.jpeg");
+    background-size: cover;
+
+    width: 100%;
+
+    @media only screen and (max-width: $bp-2m) {
+        grid-column: 1 / -1;
+    }
+}
+
+.realtors {
+    background-color: $color-secondary;
+    grid-column: col-start 7 / full-end;
+
+    @media only screen and (max-width: $bp-2m) {
+        grid-row: 3/4;
+        grid-column: 1 / -1;
+    }
+}
+
+.features {
+    background-color: $color-white;
+    grid-column: center-start / center-end;
+}
+
+
+.story__pictures{
+    grid-column: full-start / col-end 4;
+    background-image: linear-gradient(rgba($color-primary,.5),rgba($color-primary,.5)), url(../assets/img/back.jpg);
+    background-size: cover;
+
+    @media only screen and (max-width: $bp-2m) {
+        grid-column: 1 / -1;
+    }
+}
+
+.story__content{
+    background-color: $color-grey-light-1;
+    grid-column: col-start 5 / full-end;
+
+    @media only screen and (max-width: $bp-2m) {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+    }
+
+}
+    
+
+.homes {
+    background-color: $color-white;
+    grid-column: center-start / center-end;
+}
+
+.gallery {
+    grid-column: full-start / full-end;
+}
+
+.footer {
+    background-color: $color-secondary;
+
+    grid-column: full-start / full-end;
+}
